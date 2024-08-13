@@ -12,6 +12,18 @@ $ docker build -t frontend .
 $ docker run -d --name docker-frontend -p 80:80 frontend
 ```
 
+### build da imagem para o registry
+
+```sh
+$ docker build -t rafaelbarros/frontend:alpha .
+```
+
+### enviando a imagem para o registry
+
+```sh
+$ docker push rafaelbarros/frontend:alpha
+```
+
 # Commandos podman
 
 ### build da imagem
