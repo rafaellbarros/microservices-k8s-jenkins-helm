@@ -18,9 +18,10 @@ const app = express();
 const cors = require('cors');
 
 // Permitir CORS para a origem específica
+// TODO: verificar para pegar do .env
 app.use(
   cors({
-    origin: 'http://localhost:3000',
+    origin: /^http:\/\/localhost(:\d+)?$/,
     methods: 'GET,POST,PUT,DELETE',
     allowedHeaders: 'Content-Type,Authorization',
   }),
