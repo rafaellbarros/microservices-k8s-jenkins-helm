@@ -49,6 +49,18 @@ $ docker build -t backend-user .
 $ docker run -d --name docker-backend-user -p 3020:3020 backend-user
 ```
 
+### build da imagem para o registry
+
+```sh
+$ docker build -t rafaelbarros/backend-user:alpha .
+```
+
+### enviando a imagem para o registry
+
+```sh
+$ docker push rafaelbarros/backend-user:alpha
+```
+
 # Commandos podman
 
 ### build da imagem
