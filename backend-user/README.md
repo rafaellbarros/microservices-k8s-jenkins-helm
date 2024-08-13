@@ -46,7 +46,7 @@ $ docker build -t backend-user .
 ### criando o container
 
 ```sh
-$ docker run -d --name docker-backend-user -p 3021:3020 backend-user
+$ docker run -d --name docker-backend-user -p 3020:3020 backend-user
 ```
 
 # Commandos podman
@@ -60,5 +60,5 @@ $ podman build -t backend-user .
 ### criando o container
 
 ```sh
-$ podman run -d --name podman-backend-user -p 3022:3020 backend-user
+$ podman run -d --name podman-backend-user -p 3020:3020 backend-user
 ```
