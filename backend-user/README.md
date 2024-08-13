@@ -34,3 +34,31 @@ Após criado usuário, devemos criptografar a senha, antes de persistir o usuár
 
 `npm i -g create-react-app`
 `create-react-app frontend`
+
+# Commandos docker
+
+### build da imagem
+
+```sh
+$ docker build -t backend-user .
+```
+
+### criando o container
+
+```sh
+$ docker run -d --name docker-backend-user -p 3021:3020 backend-user
+```
+
+# Commandos podman
+
+### build da imagem
+
+```sh
+$ podman build -t backend-user .
+```
+
+### criando o container
+
+```sh
+$ podman run -d --name podman-backend-user -p 3022:3020 backend-user
+```
