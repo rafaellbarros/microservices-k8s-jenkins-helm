@@ -174,3 +174,11 @@ $ kubectl apply -f 03-backend-user-service.yaml --namespace staging
 ```sh
 $ kubectl describe service/backend-user -n staging
 ```
+
+```sh
+$ kubectl apply -f 03-backend-user-deploy.yaml -n staging
+```
+
+```sh
+$ kubectl describe service/backend-user -n staging
+```
