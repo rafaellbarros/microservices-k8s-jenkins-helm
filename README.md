@@ -86,3 +86,31 @@ Hello Kubernetes bootcamp! | Running on: kubernetes-bootcamp | v=1
 ```sh
 $ kubectl get deploy kubernetes-bootcamp -o yaml
 ```
+
+```sh
+$ kubectl create serviceaccount kubeadmin -n kube-system
+```
+
+```sh
+$ kubectl create clusterrolebinding kubeadmin --clusterrole=cluster-admin --serviceaccount=kube-system:kubeadmin
+```
+
+```sh
+$ kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.7.0/aio/deploy/recommended.yaml
+```
+
+```sh
+$ kubectl describe sa kubeadmin -n kube-system
+```
+
+```sh
+$ watch kubectl get all --all-namespaces
+```
+
+```sh
+$ kubectl expose deployment kubernetes-dashboard --name=kubernetes-dashboard-nodeport --target-port=8443 --port=443 --type=NodePort -n kubernetes-dashboard
+```
+
+```sh
+$ kubectl describe pod/kubernetes-dashboard-56cf4b97c5-ptxvt -n kube-system
+```
