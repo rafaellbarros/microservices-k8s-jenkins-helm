@@ -88,14 +88,6 @@ $ kubectl get deploy kubernetes-bootcamp -o yaml
 ```
 
 ```sh
-$ kubectl create serviceaccount kubeadmin -n kube-system
-```
-
-```sh
-$ kubectl create clusterrolebinding kubeadmin --clusterrole=cluster-admin --serviceaccount=kube-system:kubeadmin
-```
-
-```sh
 $ kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.7.0/aio/deploy/recommended.yaml
 ```
 
@@ -112,5 +104,37 @@ $ kubectl expose deployment kubernetes-dashboard --name=kubernetes-dashboard-nod
 ```
 
 ```sh
-$ kubectl describe pod/kubernetes-dashboard-56cf4b97c5-ptxvt -n kube-system
+$ kubectl describe pod/kubernetes-dashboard-56cf4b97c5-ptxvt -n kubernetes-dashboard
+```
+
+```sh
+$ kubectl describe sa kubernetes-dashboard -n kubernetes-dashboard
+```
+
+```sh
+$ kubectl create serviceaccount kubeadmin -n kubernetes-dashboard
+```
+
+```sh
+$ kubectl describe sa kubeadmin -n kubernetes-dashboard
+```
+
+```sh
+$ kubectl create clusterrolebinding kubeadmin --clusterrole=cluster-admin --serviceaccount=kubernetes-dashboard:kubeadmin
+```
+
+```sh
+$ kubectl create token kubeadmin -n kubernetes-dashboard
+```
+
+```sh
+$ kubectl apply -f kubeadmin-token.yaml
+```
+
+```sh
+$ kubectl describe secret kubeadmin-token -n kubernetes-dashboard
+```
+
+```sh
+$ kubectl describe sa kubeadmin -n kubernetes-dashboard
 ```
