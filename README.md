@@ -182,3 +182,13 @@ $ kubectl apply -f 03-backend-user-deploy.yaml -n staging
 ```sh
 $ kubectl describe service/backend-user -n staging
 ```
+
+```sh
+$ kubectl apply -f 02-frontend-deploy.yaml -n staging
+$ kubectl apply -f 02-frontend-service.yaml -n staging
+```
+
+```sh
+$ kubectl apply -f 04-backend-scm-deploy.yaml -n staging
+$ kubectl apply -f 04-backend-scm-service.yaml -n staging
+```
