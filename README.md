@@ -166,3 +166,11 @@ $ kubectl get all
 ```sh
 $ kubectl apply -f 02-frontend-service.yaml
 ```
+
+```sh
+$ kubectl apply -f 03-backend-user-service.yaml --namespace staging
+```
+
+```sh
+$ kubectl describe service/backend-user -n staging
+```
