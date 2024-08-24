@@ -162,3 +162,7 @@ $ kubectl apply -f 02-frontend-deploy.yaml
 ```sh
 $ kubectl get all
 ```
+
+```sh
+$ kubectl apply -f 02-frontend-service.yaml
+```
