@@ -154,3 +154,11 @@ $ kubectl delete service/kubernetes-dashboard -n kubernetes-dashboard
 ```sh
 $ kubectl apply -f k8s-ns.yaml
 ```
+
+```sh
+$ kubectl apply -f 02-frontend-deploy.yaml
+```
+
+```sh
+$ kubectl get all
+```
