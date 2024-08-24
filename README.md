@@ -146,3 +146,11 @@ $ kubectl apply -f k8s-dashboard-nodeport.yaml
 ```sh
 $ kubectl delete service/kubernetes-dashboard-nodeport -n kubernetes-dashboard
 ```
+
+```sh
+$ kubectl delete service/kubernetes-dashboard -n kubernetes-dashboard
+```
+
+```sh
+$ kubectl apply -f k8s-ns.yaml
+```
